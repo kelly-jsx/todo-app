@@ -4,7 +4,7 @@ import { AiFillCloseCircle } from 'react-icons/ai'
 
 export default function TaskModal() {
   return (
-    <div className="flex absolute top-0 justify-center items-center w-screen h-screen bg-base/90 z-100 text-text">
+    <div className="flex absolute top-0 justify-center items-center w-screen h-screen bg-base/90 z-100 text-text hidden">
       <div className="p-6 w-96 rounded-lg drop-shadow-lg lg:w-1/3 lg:p-8 bg-mantle">
         <div className="flex justify-between items-center mb-4 w-full">
           <h1 className="text-xl font-bold">Add a task</h1>

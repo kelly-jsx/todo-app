@@ -6,7 +6,7 @@ import { HiSearch } from 'react-icons/hi'
 
 export default function Header(): JSX.Element {
   return (
-    <div className="flex flex-col gap-4 p-4 text-xl lg:p-6 text-text bg-mantle">
+    <div className="flex absolute top-0 flex-col gap-4 p-4 w-screen text-xl lg:p-6 text-text bg-mantle z-90">
       <div className="flex justify-between items-center h-12">
         <div className="flex gap-3 items-center">
           <button className="text-xl 2xl:hidden">
