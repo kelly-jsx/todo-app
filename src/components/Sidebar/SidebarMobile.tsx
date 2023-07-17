@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { AiFillCloseCircle } from 'react-icons/ai'
+import DarkMode from './DarkMode'
 
 export default function SidebarMobile(): JSX.Element {
   return (
@@ -16,6 +17,7 @@ export default function SidebarMobile(): JSX.Element {
           <button className="px-4 py-1 w-full text-base capitalize rounded bg-secondary">
             add new task
           </button>
+          <DarkMode />
         </div>
         <div className="flex flex-col mt-8">
           <a href="">Important tasks</a>
