@@ -1,4 +1,5 @@
 import React from 'react'
+import DarkMode from './DarkMode'
 
 export default function Sidebar() {
   return (
@@ -7,9 +8,11 @@ export default function Sidebar() {
         <h1 className="text-2xl font-bold text-center text-primary">
           Todo App
         </h1>
+        {/* TODO dark mode */}
         <button className="px-4 py-1 w-full text-base capitalize rounded bg-secondary">
           add new task
         </button>
+        <DarkMode />
       </div>
       <div className="flex flex-col mt-8">
         <a href="">Important tasks</a>

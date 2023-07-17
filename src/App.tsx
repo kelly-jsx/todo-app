@@ -9,10 +9,13 @@ import Sidebar from './components/Sidebar/Sidebar'
 
 function App(): JSX.Element {
   return (
-    <div className="min-h-screen App bg-base">
+    <div className="min-h-screen App bg-base text-text">
       <Header />
       <SidebarMobile />
-      <Sidebar />
+      <div className="flex">
+        <Sidebar />
+        <h1>test</h1>
+      </div>
       <TaskModal />
     </div>
   )
