@@ -2,9 +2,12 @@ import React from 'react'
 
 // icons
 import { GiHamburgerMenu } from 'react-icons/gi'
-import { HiSearch } from 'react-icons/hi'
+import { useDispatch } from 'react-redux'
+import { toggleModal } from '../features/modalSlice'
 
 export default function Header(): JSX.Element {
+  const dispatch = useDispatch()
+
   return (
     <div className="flex absolute top-0 flex-col gap-4 p-4 w-screen text-xl lg:p-6 text-text bg-mantle z-90">
       <div className="flex justify-between items-center h-12">
@@ -21,7 +24,10 @@ export default function Header(): JSX.Element {
           type="text"
           placeholder="Search..."
         />
-        <button className="px-3 py-1 h-full text-base capitalize rounded bg-primary">
+        <button
+          className="px-3 py-1 h-full text-base capitalize rounded bg-primary"
+          onClick={() => dispatch(toggleModal())}
+        >
           add task
         </button>
       </div>

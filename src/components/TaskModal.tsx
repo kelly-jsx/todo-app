@@ -2,10 +2,10 @@ import React from 'react'
 
 import { AiFillCloseCircle } from 'react-icons/ai'
 import { useDispatch, useSelector } from 'react-redux'
-import { toggleModal } from '../features/modalSlice'
+import { toggleModal, ModalState } from '../features/modalSlice'
 
 export default function TaskModal() {
-  const modal = useSelector((state) => state.modal)
+  const modal = useSelector((state: ModalState) => state.modal)
   const dispatch = useDispatch()
 
   return (

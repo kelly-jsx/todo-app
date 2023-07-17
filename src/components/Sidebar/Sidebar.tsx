@@ -13,8 +13,6 @@ export default function Sidebar() {
         <h1 className="text-2xl font-bold text-center text-primary">
           Todo App
         </h1>
-        <p>{modal.showModal.toString()}</p>
-        {/* TODO dark mode */}
         <button
           className="px-4 py-1 w-full text-base capitalize rounded bg-secondary"
           onClick={() => dispatch(toggleModal())}
