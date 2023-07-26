@@ -41,9 +41,12 @@ export default function Sidebar() {
               <a href="">Main</a>
             </li>
             <li>
-              <a href="" className="btn-primary">
+              <button
+                className="btn-primary"
+                onClick={() => window.dir_modal.showModal()}
+              >
                 + New
-              </a>
+              </button>
             </li>
           </ul>
         </ul>

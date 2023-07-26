@@ -15,7 +15,7 @@ export default function TaskModal() {
           <form action="" className="w-full">
             <div className="w-full form-control">
               <label className="label">
-                <span className="label-text">Name</span>
+                <span className="label-text">Title</span>
               </label>
               <input
                 type="text"

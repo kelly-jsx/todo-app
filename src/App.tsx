@@ -5,6 +5,7 @@ import Counter from './features/counter/Counter'
 import Header from './components/Header'
 import TaskModal from './components/TaskModal'
 import Sidebar from './components/Sidebar/Sidebar'
+import DirModal from './components/DirModal'
 
 function App(): JSX.Element {
   return (
@@ -14,6 +15,7 @@ function App(): JSX.Element {
         <Sidebar />
         <h1>test</h1>
         <TaskModal />
+        <DirModal />
       </div>
     </div>
   )
