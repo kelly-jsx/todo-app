@@ -14,7 +14,12 @@ export default function Sidebar() {
         <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
         <ul className="p-4 w-80 h-full menu bg-mantle text-base-content">
           <div className="flex flex-col gap-2 mb-4">
-            <button className="btn btn-primary">Add New Task</button>
+            <button
+              className="btn btn-primary"
+              onClick={() => window.my_modal_1.showModal()}
+            >
+              Add New Task
+            </button>
             <DarkMode />
           </div>
           <ul className="mb-8">

@@ -1,6 +1,5 @@
 import React from 'react'
 
-import { AiFillCloseCircle } from 'react-icons/ai'
 import { useDispatch, useSelector } from 'react-redux'
 import { toggleModal, ModalState } from '../features/modalSlice'
 
@@ -10,61 +9,59 @@ export default function TaskModal() {
 
   return (
     <>
-      {modal.showModal ? (
-        <div className="flex absolute top-0 justify-center items-center w-screen h-screen bg-base/90 z-100 text-text">
-          <div className="p-6 w-96 rounded-lg drop-shadow-lg lg:w-1/3 lg:p-8 bg-mantle">
-            <div className="flex justify-between items-center mb-4 w-full">
-              <h1 className="text-xl font-bold">Add a task</h1>
-              <button
-                className="text-2xl text-primary"
-                onClick={() => dispatch(toggleModal())}
-              >
-                <AiFillCloseCircle />
-              </button>
+      <dialog id="my_modal_1" className="modal">
+        <form method="dialog" className="modal-box bg-mantle">
+          <h3 className="text-lg font-bold">Add new task</h3>
+          <form action="" className="w-full">
+            <div className="w-full form-control">
+              <label className="label">
+                <span className="label-text">Name</span>
+              </label>
+              <input
+                type="text"
+                placeholder="e.g, study for the test"
+                className="w-full input input-bordered"
+              />
             </div>
-            <form className="flex flex-col gap-4">
-              <label className="flex flex-col">
-                Name
-                <input
-                  type="text"
-                  placeholder="e.g, study for the test"
-                  className="p-1 rounded bg-base focus:outline-none"
-                  required
-                />
+            <div className="w-full form-control">
+              <label className="label">
+                <span className="label-text">Date</span>
               </label>
-              <label className="flex flex-col">
-                Date
-                <input
-                  type="date"
-                  className="p-1 rounded bg-base focus:outline-none"
-                  required
-                />
+              <input
+                type="date"
+                placeholder="e.g, study for the test"
+                className="w-full input input-bordered"
+              />
+            </div>
+            <div className="w-full form-control">
+              <label className="label">
+                <span className="label-text">Description (optional)</span>
               </label>
-              <label className="flex flex-col">
-                Description (optional)
-                <textarea
-                  placeholder="e.g, study for the test"
-                  className="p-1 rounded bg-base focus:outline-none"
-                ></textarea>
+              <textarea
+                className="w-full textarea textarea-bordered"
+                placeholder="e.g, study for the test"
+              ></textarea>
+            </div>
+            <div className="w-full form-control">
+              <label className="label">
+                <span className="label-text">Directory</span>
               </label>
-              <label className="flex flex-col">
-                Directory
-                <select className="p-1 rounded bg-base focus:outline-none">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                </select>
-              </label>
-              <button
-                type="submit"
-                className="px-4 py-1 mt-5 w-full text-base capitalize rounded transition bg-primary hover:bg-secondary"
-              >
-                add new task
-              </button>
-            </form>
+              <select className="w-full select select-bordered">
+                <option disabled selected>
+                  Directory
+                </option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+              </select>
+            </div>
+          </form>
+          <div className="modal-action">
+            <button className="btn btn-primary">Add new task</button>
+            <button className="btn btn-ghost">Close</button>
           </div>
-        </div>
-      ) : null}
+        </form>
+      </dialog>
     </>
   )
 }

@@ -3,7 +3,6 @@ import Counter from './features/counter/Counter'
 
 // components
 import Header from './components/Header'
-import SidebarMobile from './components/Sidebar/SidebarMobile'
 import TaskModal from './components/TaskModal'
 import Sidebar from './components/Sidebar/Sidebar'
 
@@ -14,8 +13,8 @@ function App(): JSX.Element {
       <div className="flex">
         <Sidebar />
         <h1>test</h1>
+        <TaskModal />
       </div>
-      <TaskModal />
     </div>
   )
 }

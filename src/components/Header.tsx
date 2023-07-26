@@ -9,7 +9,7 @@ export default function Header(): JSX.Element {
   const dispatch = useDispatch()
 
   return (
-    <div className="navbar bg-mantle">
+    <div className="relative navbar bg-mantle">
       <div className="navbar-start">
         <label
           htmlFor="my-drawer-2"
@@ -38,7 +38,10 @@ export default function Header(): JSX.Element {
             className="w-24 input input-bordered md:w-auto"
           />
         </div>
-        <button className="hidden btn btn-primary lg:block">
+        <button
+          className="hidden btn btn-primary lg:block"
+          onClick={() => window.my_modal_1.showModal()}
+        >
           Add New Task
         </button>
       </div>

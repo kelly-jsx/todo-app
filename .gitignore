@@ -6,3 +6,4 @@ dist-ssr
 
 src/components/Header-bckp.tsx
 src/components/Sidebar/Sidebar-bckp.tsx
+src/components/TaskModal-bckp.tsx
