@@ -9,34 +9,23 @@ export default function Header(): JSX.Element {
   const dispatch = useDispatch()
 
   return (
-    <div className="flex absolute top-0 flex-col gap-4 p-4 w-screen text-xl lg:p-6 text-text bg-mantle z-90">
-      <div className="flex justify-between items-center h-12">
-        <div className="flex gap-3 items-center">
-          <button className="text-xl 2xl:hidden">
-            <GiHamburgerMenu />
-          </button>
-          <h1 className="text-xl font-bold lg:text-2xl text-primary">
-            Todo App
-          </h1>
-        </div>
-        <input
-          className="hidden px-3 py-1 h-full rounded border text-text border-secondary lg:block bg-base"
-          type="text"
-          placeholder="Search..."
-        />
-        <button
-          className="px-3 py-1 h-full text-base capitalize rounded bg-primary"
-          onClick={() => dispatch(toggleModal())}
-        >
-          add task
-        </button>
+    <div className="navbar bg-mantle">
+      <div className="navbar-start">
+        <a className="text-xl normal-case btn btn-ghost text-primary">
+          Todo App
+        </a>
       </div>
-      <div className="flex justify-center items-center lg:hidden">
-        <input
-          type="text"
-          className="py-1 h-full text-lg text-center rounded border bg-base text-text border-secondary"
-          placeholder="Search..."
-        />
+      <div className="navbar-center">
+        <div className="form-control">
+          <input
+            type="text"
+            placeholder="Search"
+            className="w-24 input input-bordered md:w-auto"
+          />
+        </div>
+      </div>
+      <div className="navbar-end">
+        <button className="btn btn-primary">Add New Task</button>
       </div>
     </div>
   )

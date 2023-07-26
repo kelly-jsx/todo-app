@@ -8,9 +8,15 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require('@catppuccin/tailwindcss')({
-      // defaultFlavour: 'mocha',
-    }),
-  ],
+  plugins: [require('@catppuccin/tailwindcss'), require('daisyui')],
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+          primary: '#89b4fa',
+          secondary: '#f2cdcd',
+        },
+      },
+    ],
+  },
 }
