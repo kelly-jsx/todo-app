@@ -5,3 +5,4 @@ dist-ssr
 *.local
 
 src/components/Header-bckp.tsx
+src/components/Sidebar/Sidebar-bckp.tsx

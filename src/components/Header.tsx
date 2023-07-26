@@ -11,11 +11,17 @@ export default function Header(): JSX.Element {
   return (
     <div className="navbar bg-mantle">
       <div className="navbar-start">
+        <label
+          htmlFor="my-drawer-2"
+          className="btn btn-ghost drawer-button lg:hidden"
+        >
+          <GiHamburgerMenu />
+        </label>
         <a className="text-xl normal-case btn btn-ghost text-primary">
           Todo App
         </a>
       </div>
-      <div className="navbar-center">
+      <div className="hidden navbar-center lg:block">
         <div className="form-control">
           <input
             type="text"
@@ -25,7 +31,16 @@ export default function Header(): JSX.Element {
         </div>
       </div>
       <div className="navbar-end">
-        <button className="btn btn-primary">Add New Task</button>
+        <div className="form-control lg:hidden">
+          <input
+            type="text"
+            placeholder="Search"
+            className="w-24 input input-bordered md:w-auto"
+          />
+        </div>
+        <button className="hidden btn btn-primary lg:block">
+          Add New Task
+        </button>
       </div>
     </div>
   )

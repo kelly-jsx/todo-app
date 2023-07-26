@@ -11,7 +11,6 @@ function App(): JSX.Element {
   return (
     <div className="min-h-screen App bg-base text-text">
       <Header />
-      <SidebarMobile />
       <div className="flex">
         <Sidebar />
         <h1>test</h1>
