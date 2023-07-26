@@ -6,6 +6,7 @@ import Header from './components/Header'
 import TaskModal from './components/TaskModal'
 import Sidebar from './components/Sidebar/Sidebar'
 import DirModal from './components/DirModal'
+import TasksGrid from './components/TasksGrid'
 
 function App(): JSX.Element {
   return (
@@ -13,7 +14,10 @@ function App(): JSX.Element {
       <Header />
       <div className="flex">
         <Sidebar />
-        <h1>test</h1>
+        <div className="p-4">
+          <TasksGrid />
+        </div>
+        {/* modals */}
         <TaskModal />
         <DirModal />
       </div>
