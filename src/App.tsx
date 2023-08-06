@@ -12,9 +12,9 @@ function App(): JSX.Element {
   return (
     <div className="min-h-screen App bg-base text-text">
       <Header />
-      <div className="flex">
+      <div className="flex w-full">
         <Sidebar />
-        <div className="p-4">
+        <div className="w-full p-4">
           <TasksGrid />
         </div>
         {/* modals */}

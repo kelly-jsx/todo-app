@@ -11,15 +11,15 @@ type Props = {
 
 export default function TaskCard({ isImportant, isCompleted }: Props) {
   return (
-    <div className="w-full h-72 shadow-xl lg:w-72 card bg-surface0">
+    <div className="w-auto shadow-xl h-72 card bg-surface0">
       <div className="card-body">
         <h2 className="card-title">Title</h2>
         <p>Task desc</p>
-        <div className="flex gap-2 items-center">
+        <div className="flex items-center gap-2">
           <HiCalendar />
           <p>23/04/2023</p>
         </div>
-        <div className="justify-between items-center card-actions">
+        <div className="items-center justify-between card-actions">
           <div>
             {isCompleted ? (
               <div className="text-base badge badge-neutral bg-green">
